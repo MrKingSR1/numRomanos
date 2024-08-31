@@ -1,0 +1,176 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-family: 'Fjalla One', negrita;
+    color: #a3008d;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#section-form {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: slideInRight 0.8s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#input-numero {
+    color: #f700b9;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    border: 2px solid #f700ce;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#input-numero:focus {
+    border-color: #5a0339;
+    box-shadow: 0 0 8px rgba(247, 0, 206, 0.6);
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultado {
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+    background: transparent;
+    color:#5a0339;
+    border-radius: 8px;
+   
+    text-align: center;
+    transform: translateY(0px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+#resultado.correcto {
+    background-color: #00ec37; 
+}
+
+#resultado.incorrecto {
+    background-color: #ff0019; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert {
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 18px;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.alert-succes {
+    color: #00ff04;
+    background-color: #dff0d8;
+    border: 0px solid #d6e9c6;
+}
+
+.alert-danger {
+    color: #ff0400;
+    background-color: #f2dede;
+    border: 0px solid #ebccd1;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 25px;
+    color: white;
+    background: linear-gradient(135deg, #640057, #c032cd);
+    font-family: 'Fjalla One', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c032cd, #640057);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
